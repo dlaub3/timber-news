@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+	<div class="no-content row align-spaced">
+		<div class="column small-12 large-10 content-wrapper" >
+
+			<header>
+			<h1 class="mycard-divider error">Sorry, page not found.</h1>
+			</header>
+
+
+			{% for post in posts %}
+				{% include [ 'tease-'~post.post_type~'.twig', 'tease.twig'] %}
+			{% endfor %}
+
+
+		</div>
+</div>
+{% endblock %}

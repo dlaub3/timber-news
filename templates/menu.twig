@@ -1,0 +1,13 @@
+
+{% if menu %}
+
+	<ul class="menu dropdown" role="menubar" data-dropdown-menu="qovrot-dropdown-menu">
+	{% for item in menu %}
+		<li class="is-submenu-item is-dropdown-submenu-item {{item.classes | join(' ')}} ">
+			<a href="{{item.get_link}}">{{item.title}}</a>
+			{% include "menu.twig" with {'menu': item.get_children} %}
+		</li>
+	{% endfor %}
+	</ul>
+
+{% endif %}

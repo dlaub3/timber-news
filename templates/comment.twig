@@ -1,0 +1,23 @@
+	<div class="blog-comment">
+	<article class="comment {{comment.comment_type}}" id="comment-{{comment.ID}}">
+	<h5 class="comment-author">{{comment.author.name}} Said:</h5>
+	<div class="comment-content">{{comment.comment_content|wpautop}}</div>
+	<div class="reply">{{comment.reply_link( "Reply")}}</div>
+	</article>
+	<br/>
+
+		{% for comment in comment.children %}
+		<div class="blog-reply">
+		<article class="comment {{comment.comment_type}}" id="comment-{{comment.ID}}">
+		<h5 class="comment-author"><img src="{{comment.author.avatar}}" > {{comment.author.name}} Said:</h5>
+		<div class="comment-content">{{comment.comment_content|wpautop}}</div>
+		<div class="reply">{{comment.reply_link( "Reply")}}</div>
+		</article>
+		<br/>
+		{% for comment in comment.children %}
+		{% include "comment.twig" %}
+		{% endfor %}
+		</div>
+		{% endfor %}
+
+	</div>

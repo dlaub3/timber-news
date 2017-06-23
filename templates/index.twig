@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+{% block content %}
+
+		{%	if pagination.current == 1 %}
+
+		{% include [ 'slider.twig' ] %}
+
+
+		<section class="parallax-content">
+		<header class="tick">
+			<h1 class="hdr-logo show-for-medium">
+				<a class="hdr-logo-link" href="{{site.url}}" rel="home">
+
+					<span class="inline lyme-l">
+						<span class="hdr">L</span>
+						<span class="hdr">y</span>
+						<span class="hdr">m</span>
+						<span class="hdr">e</span>
+
+					</span>
+
+					<span class="inline lyme-r">
+						<span class="hdr">H</span>
+						<span class="hdr">e</span>
+						<span class="hdr">l</span>
+						<span class="hdr">p</span>
+					</span>
+
+				</a>
+			</h1>
+		</header>
+
+
+		<!-- {% include [ 'catbox.twig' ] %} -->
+
+		{%	endif  %}
+
+
+			<div class="page">
+				<div  class="row small-up-1 medium-up-2">
+					{% for post in posts %}
+						{% include [ 'tease-'~post.post_type~'.twig', 'tease.twig'] %}
+					{% endfor %}
+				</div>
+			</div>
+
+
+		{% include ['pagination.twig'] %}
+
+		</section>
+
+		{% endblock %}

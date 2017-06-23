@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="page">
+  <div class="row align-spaced">
+
+    {% if woo_sidebar_1 %}
+    <div class="column small-12 large-10">
+      <aside class="">
+        {{woo_sidebar_1}}
+      </aside>
+    </div>
+    {% endif %}
+
+    <div class="column small-12 large-10">
+        {{content}}
+    </div>
+
+    {% if woo_sidebar_2 %}
+    <div class="column show-for-large large-2">
+      <aside class="layout-sidebar right">
+        {{woo_sidebar_2}}
+      </aside>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

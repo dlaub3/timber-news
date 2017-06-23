@@ -1,0 +1,12 @@
+{% if woomenu %}
+
+	<ul class="menu dropdown align-right" role="menubar" data-dropdown-menu="qovrot-dropdown-menu">
+	{% for item in woomenu %}
+		<li class="is-submenu-item is-dropdown-submenu-item {{item.classes | join(' ')}} ">
+			<a href="{{item.get_link}}">{{item.title}}</a>
+			{% include "woomenu.twig" with {'woomenu': item.get_children} %}
+		</li>
+	{% endfor %}
+	</ul>
+
+{% endif %}

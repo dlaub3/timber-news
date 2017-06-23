@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+
+	<div class="no-content row align-spaced">
+		<div class="column small-12 large-10 content-wrapper" >
+			<header>
+				{% if posts != null %}
+				<h1 class="mycard-divider card-divider-h1"> Search results for &lsquo;{{ function('get_search_query') }}.&rsquo;</h1>
+				{% else %}
+				<h1 class="mycard-divider error"> Sorry, nothing found for &lsquo;{{ function('get_search_query') }}.&rsquo;</h1>
+				{% endif %}
+			</header>
+
+
+			{% for post in posts %}
+				{% include [ 'tease-post.twig'] %}
+			{% endfor %}
+
+			{% if posts == null %}
+			{% for post in search %}
+				{% include [ 'tease-post.twig'] %}
+			{% endfor %}
+			{% endif %}
+
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+		<h4 class="mycard-divider card-divider-h4">{{post.title}}</h4>
+		<div class="card">
+
+
+		    {% if post.thumbnail.src %}
+		    <img class="thumbnail" src="{{post.thumbnail.src|resize(500, 200)}}" alt="Image for {{post.title}}">
+		    {% endif %}
+
+
+	    <div class="card-section">
+				<p>{{post.get_preview(55, false,false,true)}}</p>
+				<a  href="{{post.link}}" class="button secondary expanded">Continue Reading</a>
+	  	</div>
+		</div>
+{% endblock %}

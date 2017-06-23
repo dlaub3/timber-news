@@ -1,0 +1,88 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class=" page-background " data-template="base.twig">
+		<header  class="header">
+			{% block header %}
+
+
+
+					<!-- setup for foundation mobile menu -->
+					<div class="top-bar" data-responsive-toggle="nav-main" style="width:100%; z-index: 11;">
+						<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
+						<div class="title-bar-title">
+						<a class="hdr-logo-link" href="{{site.url}}" rel="home">
+							<div class="inline">
+							<span class="hdr">L</span>
+							<span class="hdr">y</span>
+							<span class="hdr">m</span>
+							<span class="hdr">e</span>
+
+							</div>
+							<div class="inline">
+							<span class="hdr">H</span>
+							<span class="hdr">e</span>
+							<span class="hdr">l</span>
+							<span class="hdr">p</span>
+							</div>
+						</a>
+						</div>
+					</div>
+
+					<!-- give the menu and scroll-to-top a location to anchor -->
+					<div id="anchor" data-magellan-target="anchor"></div>
+
+					<!-- sticky menu -->
+					<div class="sticky-container" style="height: 54.375px;" data-sticky-container>
+					<div class="top-bar sticky is-stuck is-at-top"  data-sticky data-sticky-on="large" data-top-anchor="anchor:top" data-margin-top="0" style="width:100%; z-index: 11;">
+					<nav id="nav-main" class="main-navigation top-bar-left" data-animate="hinge-in-from-top hinge-out-from-top">
+
+
+
+					<!-- toggle search bar -->
+					<form data-toggle="searchBar"><i class="float-right fi-magnifying-glass"></i></form>
+
+					<!-- get the menu -->
+
+
+					{% include "menu.twig" with {'menu': menu.get_items} %}
+
+					<!-- add search in header -->
+					{{ function('get_search_form') }}
+					</nav><!-- #nav -->
+					</div>
+					</div>
+			{% endblock %}
+		</header>
+
+	<main>
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+	</main>
+
+	<footer id="footer">
+
+		{% include 'footer.twig' %}
+
+		<div class="info">
+				{{ function('wp_footer') }}
+		</div>
+
+		{% block footer %}
+
+		{% endblock %}
+		<!-- scroll to top button -->
+		<div data-magellan="ig2y0y-magellan" data-events="scroll" data-scroll="psh6yc-magellan"><a  id="up" class="scroll"  href="#anchor"><i  class="fi-arrow-up large"></i></a></div>
+
+	</footer>
+
+
+
+	</body>
+</html>

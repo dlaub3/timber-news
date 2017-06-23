@@ -1,0 +1,39 @@
+	<div class="page">
+	<div class="row align-spaced">
+
+		<div class="column small-12 large-12 content-wrapper">
+			<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<header>
+			<h1 class="mycard-divider card-divider-h1">{{post.title}}</h1>
+			</header>
+
+			{% if post.thumbnail.src %}
+			<figure>
+			<div class="card">
+				<img  src="{{post.thumbnail.src|resize(1000, 350)}}" alt="Image for {{post.title}}" >
+			</div>
+			</figure>
+			{% endif %}
+
+
+				<div  class="single article-content">
+
+
+				<div class="article-body">
+
+					<div class="article-body">
+						{{ function('the_content')}}
+					</div>
+
+				</div>
+
+				</div>
+			</article>
+		</div><!-- content-wrapper column end of article -->
+
+
+
+
+
+	</div> <!-- end of row aligned-spaced  -->
+</div>  <!-- end of page background  -->

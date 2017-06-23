@@ -1,0 +1,21 @@
+{% extends "archive-tease.twig" %}
+
+{% block content %}
+
+  <div class="card">
+
+    <div class="card-divider card-divider-h4">
+    <h4>{{post.title}}</h4>
+    </div>
+
+    {% if post.thumbnail.src %}
+    <img src="{{post.thumbnail.src|resize(300, 150)}}" alt="Image for {{post.title}}">
+    {% endif %}
+
+    <div class="card-section">
+      <p>{{post.get_preview(30, false,false,true) }}</p>
+      <a href="{{ post.link }}" class="button expanded">Continue Reading</a>
+    </div>
+  </div>
+
+{% endblock %}
