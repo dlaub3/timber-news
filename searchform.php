@@ -1,5 +1,5 @@
 
-<div id="searchBar" data-toggler=".expanded" class="row search expanded-mobile" data-animate="slide-in-left slide-out-right">
+<div id="searchBar" data-toggler=".expanded" class="row search expanded-mobile">
   <div class="small-12 columns">
     <div class="row align-center collapse">
       <!-- Search field -->

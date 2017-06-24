@@ -138,9 +138,9 @@ register_sidebar( array(
 'name' => 'Right Sidebar 1',
 'id' => 'right_sidebar_1',
 'description' => 'Appears in the footer area',
-'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'before_widget' => '<aside id="%1$s" class="widget %2$s card">',
 'after_widget' => '</aside>',
-'before_title' => '<h3 class="widget-title">',
+'before_title' => '<h3 class="widget-title card-divider">',
 'after_title' => '</h3>',
 ) );
 
@@ -180,7 +180,7 @@ function tnews_post_nav() {
 		return;
 	}
 	?>
-	<nav class="pagination text-center" aria-label="Pagination">
+	<nav class="pagination card text-center" aria-label="Pagination">
 		<h3 class="card-divider"><?php esc_html_e( 'Post navigation', 'tnews' ); ?></h3>
 		<div class="nav-links">
 			<?php
