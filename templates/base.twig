@@ -38,14 +38,9 @@
 					<div id="anchor" data-magellan-target="anchor"></div>
 
 					<!-- sticky menu -->
-					<div class="sticky-container" style="height: 54.375px;" data-sticky-container>
-					<div class="top-bar sticky is-stuck is-at-top"  data-sticky data-sticky-on="large" data-top-anchor="anchor:top" data-margin-top="0" style="width:100%; z-index: 11;">
-					<nav id="nav-main" class="main-navigation top-bar-left" data-animate="hinge-in-from-top hinge-out-from-top">
-
-
-
-					<!-- toggle search bar -->
-					<form data-toggle="searchBar"><i class="float-right fi-magnifying-glass"></i></form>
+					<!-- <div class="sticky-container" style="height: 54.375px;" data-sticky-container>
+					<div class="top-bar sticky is-stuck is-at-top"  data-sticky data-sticky-on="large" data-top-anchor="anchor:top" data-margin-top="0" style="width:100%; z-index: 11;"> -->
+					<nav id="nav-main" class="main-navigation top-bar top-bar-left" data-animate="hinge-in-from-top hinge-out-from-top">
 
 					<!-- get the menu -->
 
@@ -54,9 +49,13 @@
 
 					<!-- add search in header -->
 					{{ function('get_search_form') }}
+
+					<!-- toggle search bar -->
+					<form data-toggle="searchBar"><i class="float-right fi-magnifying-glass "></i></form>
+
 					</nav><!-- #nav -->
-					</div>
-					</div>
+					<!-- </div>
+					</div> -->
 			{% endblock %}
 		</header>
 

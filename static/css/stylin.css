@@ -107,8 +107,7 @@ a:hover, a:focus {
     color: #1c2a3b
 }
 .search {
-    height: 100px;
-    padding: 20px
+    height: 47px
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Droid Sans', Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -218,7 +217,8 @@ input[type=search]:focus {
     font-weight: 700;
     padding: 10px;
     background: #a96938;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-size: 1.2em
     /*background-image: -webkit-linear-gradient(#4A719D, #8EA6C2);
     background-image: -o-linear-gradient(#4A719D, #8EA6C2);
     background-image: linear-gradient(#4A719D, #8EA6C2);*/
@@ -701,7 +701,7 @@ footer {
         font-size: 1.5em
     }
     .float-right {
-        font-size: 1.5em
+        font-size: 2rem
     }
 }
 /*Default WP CSS*/
